@@ -1,31 +1,70 @@
+<div
+  (click)="onClickSimple()"
+  (mousedown)="clickInfo = 'mousedown'"
+  [@clickedState]="clickInfo"></div>
+
+<p
+  (click)="paragraphClick = 'clicked'"
+  [@clickedState]="paragraphClick">Some text</p>
+
+<hr>
+<input
+  [ngStyle]="{marginBottom: '10px'}"
+  (input)="numberEntered = $event.target.value"
+  type="number" >
+<br>
+<span [@numberEnteredState]="numberEntered == 1 ? 'selected' : 'unselected'">1</span>
+<span [@numberEnteredState]="numberEntered == 2 ? 'selected' : 'unselected'">2</span>
+<span [@numberEnteredState]="numberEntered == 3 ? 'selected' : 'unselected'">3</span>
+<span [@numberEnteredState]="numberEntered == 4 ? 'selected' : 'unselected'">4</span>
+<span [@numberEnteredState]="numberEntered == 5 ? 'selected' : 'unselected'">5</span>
+<span [@numberEnteredState]="numberEntered == 6 ? 'selected' : 'unselected'">6</span>
+<span [@numberEnteredState]="numberEntered == 7 ? 'selected' : 'unselected'">7</span>
+<span [@numberEnteredState]="numberEntered == 8 ? 'selected' : 'unselected'">8</span>
+<span [@numberEnteredState]="numberEntered == 9 ? 'selected' : 'unselected'">9</span>
+<span [@numberEnteredState]="numberEntered == 0 ? 'selected' : 'unselected'">0</span>
+
 <!--<app-goal-->
 <!--*ngFor="let goal of courseGoals"-->
 <!--[goal]="goal"-->
 <!--[ngClass]="{active: goal.isActiveGoal}"-->
 <!--(click)="goal.isActiveGoal = !goal.isActiveGoal"></app-goal>-->
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>
-        My Quotes
-      </h1>
-      <div class="interesting">
-        <app-quote
-          (click)="isFavorite = !isFavorite"
-          [ngStyle]="{'width.px': isFavorite ? 600 : 400}"
-          [ngClass]="{'favorite super-favorite': isFavorite}"></app-quote>
-      </div>
-      <button
-        class="btn btn-primary"
-        (click)="onShowBoring(boringBlock)">Show boring quotes</button>
-      <div
-        style="display: none"
-        class="boring"
-        #boringBlock>
-        <div id="very-boring">
-          <app-quote></app-quote>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-xs-12">-->
+      <!--<h1>-->
+        <!--My Quotes-->
+      <!--</h1>-->
+      <!--<div class="interesting">-->
+        <!--<app-quote-->
+          <!--(click)="isFavorite = !isFavorite"-->
+          <!--[ngStyle]="{'width.px': isFavorite ? 600 : 400}"-->
+          <!--[ngClass]="{'favorite super-favorite': isFavorite}"></app-quote>-->
+      <!--</div>-->
+      <!--<button-->
+        <!--class="btn btn-primary"-->
+        <!--(click)="onShowBoring(boringBlock)">Show boring quotes</button>-->
+      <!--<div-->
+        <!--style="display: none"-->
+        <!--class="boring"-->
+        <!--#boringBlock>-->
+        <!--<div id="very-boring">-->
+          <!--<app-quote></app-quote>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div-->
+  <!--id="div1"-->
+  <!--[ngClass]="{marked: divClicked}"-->
+  <!--[ngStyle]="{backgroundColor: divClicked ? 'red' : 'blue'}"-->
+  <!--(click)="divClicked = true"></div>-->
+<!--<hr>-->
+<!--<div-->
+  <!--(click)="doAnimate = true"-->
+  <!--[ngClass]="{'animate': doAnimate}"-->
+  <!--id="div2"></div>-->
